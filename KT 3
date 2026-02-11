@@ -1,0 +1,12 @@
+# 1
+def print_hello(name):
+    print(f'hello,\n{name}')
+    string = "telegram"
+    print_hello(string)   
+
+# 2
+def gcd(a,b):
+    while b != 0: a, b = b, a % b
+    return a
+result = gcd(12, 45)
+print('result =', result)
