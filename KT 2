@@ -1,0 +1,73 @@
+# 1
+a = list(range(1, 11))
+
+print('массив: ')
+print(a)
+
+a.reverse()
+print('перевернутый массив: ')
+print(a)
+
+
+# 2
+import random
+
+rows = int(input('введите кол-во строк: '))
+cols = int(input('введите кол-во столбцов: '))
+
+matrix = []
+for i in range(rows):
+    r = []
+    for j in range(cols):
+        r.append(random.randint(-20, 20))
+    matrix.append(r)
+
+print('массив:')
+for r in matrix: print(r)
+    
+min_element = matrix[0][0]
+for r in matrix:
+    for element in r:
+        if element < min_element:
+            min_element = element
+
+print('мин элемент:', min_element)
+
+if rows >= 2: print('вторая строка:', matrix[1])
+else: print('строка отсутствует')
+    
+if cols >= 1: fircol = [matrix[i][0] for i in range(rows)]; print('первый столбец:', fircol)
+else: print('столбец отсутствует')
+    
+
+# 3
+n = 4
+
+mas = []
+for i in range(n):
+    mas.append(int(input(f'введите элемент {i + 1}: ')))
+
+for i in range(n - 1):
+    if mas[i] == 0 and mas[i + 1] == 0:
+        print('есть 2 подряд идущих 0')
+        break
+else: print('нету подряд идущих 0')
+
+
+# 4
+import random
+
+n = 4
+
+arr = [random.randint(1,30) for i in range(n)]
+print('массив:', arr)
+
+d3 = 0; summ = 0; sumnum = 0
+
+for num in arr:
+    if num % 3 == 0: d3 += 1
+    if num % 2 == 0: summ += num; sumnum += 1
+print('кол-во чисел делящихся на 3:', d3)
+
+if sumnum > 0: print('среднее арифметическое:', summ / sumnum)
+else: print('четных чисел нет')
