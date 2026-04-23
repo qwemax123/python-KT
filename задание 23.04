@@ -1,0 +1,22 @@
+nums = []
+
+A, B, K = map(int, input().split())
+
+for num in range(A, B + 1):
+    x = 1
+    zero = False
+
+    for n in str(num):
+        if n != '0':
+            x *= int(n)
+            zero = True
+
+    if zero and x == K:
+        nums.append(num)
+
+if not nums:
+    print('Подходящих чисел нет')
+else:
+    print('Количество: ', len(nums))
+    print('Минимальное: ', min(nums))
+    print('Максимальное: ', max(nums))
