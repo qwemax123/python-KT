@@ -1,0 +1,69 @@
+# 1
+a = 150
+b = 250
+res = a + b
+print('№1 ', res)
+
+# 2
+L = 10
+w = 5
+S = L * w
+print('№2 ', S)
+
+# 3
+a = 5
+b = 4
+c = 5
+print('№3 ', (a+b+c)/3)
+
+# 4
+sec = 135
+print('№4 ', sec//60,',', sec%60)
+
+# 5
+a = 20
+print('№5 ', 20//3)
+
+# 6
+a = 7
+print('№6 ', a**a)
+
+# 7
+product = 1200
+a = product - (product*0.15)
+b = a + (a*0.2)
+print('№7 ', a)
+
+# 8
+w = 70
+h = 1.75
+print('№8 ', 'imt', round(w/h**2))
+
+# 9
+ru = 50
+kurs = 90.5
+com = 2.5
+comuccua = com / 100
+rub = ru * kurs
+result = rub * (1+comuccua)
+print('№9 ', result)
+
+# 10
+s = 3665
+h = s // 3600
+rem = s % 3600
+m = rem // 60
+s = rem % 60
+print('№10 ', f'{h}:{m}:{s}')
+
+# 11
+ran = int(input('число: '))
+n1 = ran % 10
+ran = ran // 10
+n2 = ran % 10
+ran = ran // 10
+n3 = ran % 10
+sum = n1+ n2 + n3
+mul = n1 * n2 * n3
+div = mul - sum
+print('№11 ', f'{sum}, {mul}, {div}')
