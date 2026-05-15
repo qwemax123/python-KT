@@ -1,0 +1,14 @@
+def calculator(a,b,c):
+    if c == '+':
+        return a + b
+    if c == '-':
+        return a - b
+    if c == '*':
+        return a * b
+    if c == '/':
+        return a / b
+a = int(input('первое число: '))
+b = int(input('второе число: '))
+c = input('+,-,*,/')
+result = calculator(a,b,c)
+print('результат: ', result)
